@@ -18,6 +18,8 @@ jobs:
       uses: 'google-github-actions/auth@v1'
       with:
         token_format: 'access_token'
+        create_credentials_file: true
+        access_token_lifetime: "120s"
         workload_identity_provider: 'projects/543012353984/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
         service_account: 'devops-admin@sodium-atrium-308005.iam.gserviceaccount.com'
 
