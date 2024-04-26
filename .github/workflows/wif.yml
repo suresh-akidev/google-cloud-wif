@@ -31,4 +31,4 @@ jobs:
     - id: 'gcloud'
       name: 'gcloud'
       run: |-
-        gcloud secrets versions access "latest" --secret "my-secret"
+        gcloud storage buckets create gs://dude-abcd-xyz --default-storage-class=nearline --location=asia
