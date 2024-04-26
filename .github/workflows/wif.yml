@@ -21,7 +21,7 @@ jobs:
         create_credentials_file: true
         access_token_lifetime: "120s"
         workload_identity_provider: 'projects/543012353984/locations/global/workloadIdentityPools/dude/providers/github'
-        service_account: 'storageadminsvc@sodium-atrium-308005.iam.gserviceaccount.com'
+        service_account: 'githubsvc@sodium-atrium-308005.iam.gserviceaccount.com'
 
     # Install gcloud, `setup-gcloud` automatically picks up authentication from `auth`.
     - name: 'Set up Cloud SDK'
