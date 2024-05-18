@@ -33,9 +33,14 @@ jobs:
     - name: Terraform Init
       id: init
       run: terraform init
+
+    - name: Terraform plan
+      id: plan
+      working-directory: ./terraform
+      run: terraform plan
       
     # Now you can run gcloud commands authenticated as the impersonated service account.
-    - id: 'gcloud'
-      name: 'gcloud'
-      run: |-
-        gcloud storage buckets create gs://dude-abcd-xyz --default-storage-class=nearline --location=asia
+    # - id: 'gcloud'
+    #   name: 'gcloud'
+    #   run: |-
+    #     gcloud storage buckets create gs://dude-abcd-xyz --default-storage-class=nearline --location=asia
