@@ -39,6 +39,11 @@ jobs:
       id: plan
       working-directory: ./terraform
       run: terraform plan
+
+    - name: Terraform apply
+      id: apply
+      working-directory: ./terraform
+      run: terraform apply -auto-approve
       
     # Now you can run gcloud commands authenticated as the impersonated service account.
     # - id: 'gcloud'
